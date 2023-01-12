@@ -1,0 +1,105 @@
+@import 'colors';
+
+.stencil-toggle-wrapper {
+  display: flex;
+  margin-top: 24px;
+  flex-direction: row;
+
+  label {
+    font-size: 0.75rem;
+    line-height: 20px;
+  }
+}
+
+.stencil-toggle {
+  margin-left: auto;
+  display: block;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: ' ';
+    display: block;
+    width: 26px;
+    border: 1px solid $color-cloudGrey;
+    border-radius: 9px;
+    position: absolute;
+    left: -28px;
+    background: $color-cloudGrey;
+    height: 13px;
+  }
+
+  input[type="checkbox"]:hover + label::after {
+    border: 2px solid $color-hitGrey !important;
+    background-color: $color-hazeGrey !important;
+  }
+
+  input[type="checkbox"] + label::after {
+    content: ' ';
+    display: block;
+    height: 19px;
+    width: 19px;
+    border: 1px solid $color-hitGrey;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: -38px;
+    background: white;
+    transition: all 0.3s ease-in;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    left: -40px;
+    background: $color-ctaBlue;
+    opacity: 0.5;
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    left: -21px;
+    transition: all 0.3s ease-in;
+    background: $color-ctaBlue;
+    border: 1px solid $color-ctaBlue;
+  }
+}
+
+.stencil-ui-input-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+
+  label {
+    font-size: 0.75rem;
+    line-height: 20px;
+    margin-left: 8px;
+    padding-right: 16px;
+  }
+
+  input[type='text'] {
+    padding: 8px;
+    font-size: 0.875rem; /* -- 14px -- */
+    line-height: 1.125rem; /* -- 18px -- */
+    color: $color-darkGrey;
+    background-color: $color-lightGrey;
+    border: 1px solid $color-hitGrey;
+    border-radius: 3px;
+    width: 58px;
+    right: 24px;
+  }
+
+  input[type='text'].error {
+    border-color: $color-warnRed;
+  }
+}
+.stencil-ui-error-message {
+  text-align: right;
+  color: $color-warnRed;
+  font-size: 10px;
+  margin-top: 8px;
+}
