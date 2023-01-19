@@ -2,7 +2,7 @@ import { Component, h, Prop } from '@stencil/core';
 import { TextboxSetting } from './my-component';
 
 @Component({
-  tag: 'lq-l',
+  tag: 'my-toggle',
 })
 
 export class MyLabel {

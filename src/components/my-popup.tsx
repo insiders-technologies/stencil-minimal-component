@@ -9,7 +9,7 @@ export class MyPopup {
 
   render() {
     return (
-      <lq-l textbox={this.setting.textbox} />
+      <my-toggle textbox={this.setting.textbox} />
     );
   }
 }

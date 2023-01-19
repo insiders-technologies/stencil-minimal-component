@@ -7,27 +7,22 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                            | Default     |
-| --------- | --------- | ----------- | ------------------------------- | ----------- |
-| `setting` | --        |             | `{ textbox?: TextboxSetting; }` | `undefined` |
+| Property  | Attribute | Description | Type                 | Default     |
+| --------- | --------- | ----------- | -------------------- | ----------- |
+| `textbox` | --        |             | `{ label: string; }` | `undefined` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [my-component](.)
-
-### Depends on
-
-- [lq-l](.)
+ - [my-popup](.)
 
 ### Graph
 ```mermaid
 graph TD;
-  my-popup --> lq-l
-  my-component --> my-popup
-  style my-popup fill:#f9f,stroke:#333,stroke-width:4px
+  my-popup --> my-toggle
+  style my-toggle fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
